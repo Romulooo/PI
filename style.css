@@ -1,0 +1,566 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+/* Notícia em ícones, talvez carossel FEITO*/
+/* Rodapé mais organizado FEITO */
+/* Menu da Navbar melhor, fontes antepenultimo item  FEITO/
+/* Barra de pesquisa mais simples, cores melhores  FEITO/ 
+/* Cores FEITO */ 
+/* Fonte FEITO */
+
+:root {
+    --sombra: #00000080;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: white;
+    margin: 0;
+    transition: ease-in-out 0.6s;
+}
+
+h1{
+    color: #000;
+    margin-left: 3vw;
+    margin-top: 7.2vw;
+    font-size: 3vw;
+    font-family: 'Poppins';
+}
+
+h2{
+    padding-right: 10%;
+    margin-top: 0.9vw;
+    font-size: 1.4vw;
+    display:inline-flex;
+    position: relative;
+    color: #383838;
+    font-family: 'Poppins';
+}
+
+h3{
+    color: #000;
+    margin-left: 2vw;
+    margin-bottom: 0vw;
+    font-size: 2vw;
+    font-family: 'Poppins';
+}
+
+#pg_atual{
+    color: #000;
+}
+
+p{
+    font-size: 1.8vw;
+    font-family: 'Poppins';
+}
+
+img:not(.titulo, .logo, .logoIFC, .noticia_imagem, .contraste, .aumentafonte, .diminuifonte, .seta){
+    border-radius: 1vw / 1vw;
+    transition: ease-in-out 0.2s;
+}
+
+img:not(.titulo, .logo, .logoIFC, .noticia_imagem, .contraste, .aumentafonte, .diminuifonte, .seta):hover{
+    filter: drop-shadow(1.2vw 1.2vw 0.5vw var(--sombra));
+}
+
+li{
+    margin-left: -2vw;
+    font-size: 1.4vw;
+    color: #000;
+    display: none;
+    text-decoration: none;
+}
+li:hover{
+    background-color: #b2b2b2;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Configuração do botão de acessibilidade */
+.contraste{
+    display:block;
+    margin-left: 96.3%;
+    height: 3vw;
+    position: fixed;
+    margin-top: 34vw;
+    z-index: 100;
+    background-color: white;
+    border-radius: 10%;
+    border: solid 0.2vw;
+    border-color: #000;
+    transition: ease-in-out 0.6s;
+}
+
+.aumentafonte{
+    display:block;
+    margin-left: 96.3%;
+    height: 3vw;
+    position: fixed;
+    margin-top: 26vw;
+    z-index: 100;
+    background-color: white;
+    border-radius: 10%;
+    border: solid 0.2vw;
+    border-color: #000;
+    transition: ease-in-out 0.6s;
+}
+
+.diminuifonte{
+    display:block;
+    margin-left: 96.3%;
+    height: 3vw;
+    position: fixed;
+    margin-top: 30vw;
+    z-index: 100;
+    background-color: white;
+    border-radius: 10%;
+    border: solid 0.2vw;
+    border-color: #000;
+    transition: ease-in-out 0.6s;
+}
+
+/* Configuração dos botões da NavBar */
+.clique1{
+    text-align: center;
+    width: 12%;
+    margin-right: 4%;
+    margin-left: 4%;
+    cursor: pointer;
+}
+.clique2{
+    text-align: center;
+    width: 12%;
+    margin-right: 4%;
+    margin-left: -3%;
+    cursor: pointer;
+}
+.clique3{
+    text-align: center;
+    width: 18%;
+    margin-right: 4%;
+    margin-left: -3%;
+    cursor: pointer;
+}
+.clique4{
+    text-align: center;
+    width: 7%;
+    margin-right: 3%;
+    margin-left: -3%;
+    cursor: pointer;
+}
+.clique5{
+    text-align: center;
+    width: 10%;
+    margin-right: 4%;
+    margin-left: -1%;
+    cursor: pointer;
+}
+
+/* Configuração dos outros elementos da NavBar */
+.divisória{
+    position:fixed;
+    height: 8%;
+    width: 100%;
+    background-color: #50e1f1;
+    border-width: 0.2vw;
+    border-style: solid #50e1f1;
+    border-left: 0;
+    border-right: 0;
+    
+    text-align: center;
+    display: inline-flex;
+    z-index: 19;
+}
+.navbar{
+    position: sticky;
+    top:0;
+    height: 8vw;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 100;
+    transition: ease-in-out 0.6s;
+}
+.logo{
+    position:fixed;
+    right: 44%;
+    top: 1%;
+    width: 5%;
+}
+.titulo{
+    position:fixed;
+    left:1%;
+    top: 1%;   
+    width: 50%;
+}
+.barra-de-pesquisa{
+    width: 22vw;
+    height: 2.5vw;
+    right: 5%;
+    top:8.6vw;
+    position: fixed;
+    border-style: solid 0.1vw;
+    background-color: #ffffff;
+    font-size: 1.5vw;
+    border-radius: 0.5vw;
+    text-indent: 1vw;
+}
+.barra-de-pesquisa:focus{
+    background-color: #ffffff;
+    border-style: solid 0.1vw;
+}
+.resultados{
+    margin-top: 3.7vw;
+    margin-left: 70%;
+    width: 25vw;
+    background-color: rgb(255, 255, 255);
+    display:none;
+    position: fixed;
+    z-index: 200;
+    border: solid 0.2vw black;
+}
+.fechar-pesquisa{
+    width: 2.5vw;
+    height: 2.5vw;
+    right: 5.2%;
+    top:8.8vw;
+    position: fixed;
+    border-style: solid 0.1vw;
+    background-color: #ffffff;
+    font-size: 2vw;
+    border-radius: 1vw;
+}
+
+.seta{
+    width: 2vw;
+    transform: rotate(270deg); 
+    margin-left: -0.2vw;
+}
+
+/* Configurações do Rodapé */
+.rodapé{
+    width: 100%;
+    background-color: #50e1f1;
+    border-top: solid 0.2vw #50e1f1;;
+    margin-top: 6vw;
+    height: 8vw;
+}
+
+.logoIFC{
+    margin-top: 2vw;
+    margin-left: 2vw;
+    height: 4vw;
+}
+
+.botõesRodapé{
+    margin-right: 2vw;
+    margin-top: 2.5vw;
+    color:#383838;
+    font-family: 'Poppins';
+    font-size: 1.5vw;
+    display: inline;
+    float: right;
+}
+
+
+.botõesRodapé a{
+    margin-left: 2vw;
+    color: #383838;;
+}
+
+
+
+/* Início ---------------------------------------------------------------------------------------------------- */
+.inicio-titulo{
+    margin-bottom: -5vw;
+}
+
+.inicio-titulo2{
+    margin-bottom: 3vw;
+}
+
+.inicio-p1{
+    height: 29vw;
+    width: 94%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.inicio-texto1{
+    height: 7vw;
+    margin-top: 7vw;
+    float: left;
+    width: 56vw;
+}
+
+.inicio-imagem1{
+    position: relative;
+    margin-top: 7vw;
+    height: 22vw;
+    float: right;
+    
+}
+
+.inicio-p2{
+    height: 22vw;
+    width: 94%;
+    margin-top: 3vw;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.inicio-texto2{
+    height: 13vw;
+    margin-top: 0vw;
+    float: right;
+    width: 66vw;
+}
+
+.inicio-imagem2{
+    position: relative;
+    margin-top: 0vw;
+    height: 21vw;
+    float: left;
+}
+
+.inicio-p3{
+    margin-top: 3vw;
+    height: 23vw;
+    width: 94%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.inicio-texto3{
+    height: 10vw;
+    margin-top: 0vw;
+    margin-bottom: 0vw;
+    float: left;
+    width: 66vw;
+}
+
+.inicio-imagem3{
+    position: relative;
+    margin-top: 0;
+    height: 30vw;
+    float: right;
+}
+
+.botão-artigo{
+    background-color: #df267c;
+    height: 4vw;
+    width: 14vw;
+    border: solid black;
+    margin-left: 3vw;
+    margin-top: 4vw;
+    border-radius: 1vw;
+    font-size: 1.5vw;
+    font-family: 'Englebert', sans-serif;
+}
+
+
+/* Carrossel  */
+.carrossel-div {
+    margin-top: -3vw;
+    margin-left: 3vw;
+    width: 50vw;
+    position: relative;
+}
+
+.slides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: 1vw;
+  margin-top: -2vw;
+  padding: 1vw;
+  color: white;
+  font-weight: bold;
+  font-size: 2vw;
+  transition: 0.6s ease;
+  border-radius: 0 0.2vw 0.2vw 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 0 0.2vw 0.2vw 0;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.noticia-texto {
+    color: #000000;
+    font-size: 1.6vw;
+    margin-left: 54vw;
+    position: absolute;
+    bottom: 6vw;
+    width: 36vw;
+    text-align: center;
+    font-family: 'Poppins';
+}
+
+.pontos{
+    margin-left: 26vw;
+}
+
+.dot {
+  cursor: pointer;
+  height: 1vw;
+  width: 1vw;
+  margin: 0 0.2vw;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+/* Fontes ---------------------------------------------------------------------------------------------------- */
+.fontes{
+    width: 92%;
+    margin-left: 3%;
+}
+
+
+
+/* Bilinguismo ---------------------------------------------------------------------------------------------------- */
+.bilinguismo-p1{
+    height: 20vw;
+    width: 94%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 0;
+}
+
+.bilinguismo-texto1{
+    width: 58%;
+}
+
+.bilinguismo-texto2{
+    width: 72%;
+    float: right;
+    margin-right: 3%;
+    margin-top: 0vw;
+}
+
+.bilinguismo-texto3{
+    width: 94%;
+    margin-left: 3%;
+    margin-top: 8vw;
+}
+
+.bilinguismo-imagem1{
+    position: relative;
+    margin-right: 3vw;
+    margin-top: -20vw;
+    height: 14vw;
+    float: right;
+}
+
+.bilinguismo-imagem2{
+    position: relative;
+    margin-left: 3vw;
+    margin-top: 0vw;
+    height: 29vw;
+}
+
+
+/* Contato ---------------------------------------------------------------------------------------------------- */
+.formulário{
+    margin-top: 8vw;
+    height: 30vw;
+
+}
+
+.formulário-nome{
+    width: 30vw;
+    height: 2vw;
+    margin-left: 2vw;
+    border-radius: 0.5vw;
+    border: solid black;
+    background-color: #ffffff;
+    color: #000;
+    font-size: 1.5vw;
+}
+.formulário-nome:focus{
+    outline: none;
+}
+
+.formulário-mensagem{
+    width: 30vw;
+    height: 20vw;
+    margin-left: 2vw;
+    border-radius: 0.8vw;
+    border: solid black;
+    background-color: #ffffff;
+    color: #000;
+    font-size: 1.5vw;
+    max-width: 40vw;
+    min-width: 20vw;
+    max-height: 24vw;
+    min-height: 15vw;
+}
+.formulário-mensagem:focus{
+    outline: none;
+}
+
+.formulário-enviar{
+    float: right;
+    margin-right: 40vw;
+    background-color: #26df4e;
+    border-radius: 1vw / 1vw;
+    width: 8vw;
+    height: 3vw;
+    border: solid 0.2vw;
+    font-size: 2vw;
+}
+
+/* Deficiência Auditiva ---------------------------------------------------------------------------------------------------- */
+.deficiência-texto1{
+    float: right;
+    width: 58%;
+    margin-right: 3vw;
+    margin-top: 0vw;
+}
+
+.deficiência-texto2{
+    margin-left: 3%;
+    width: 92vw;
+}
+
+.deficiência-imagem1{
+    width: 32%;
+    margin-left: 3vw;
+}
+
+.lista{
+    margin-left: 3vw;
+    font-family: 'Englebert', sans-serif;
+}
+
+/* Trabalhos Correlatos ---------------------------------------------------------------------------------------------------- */
